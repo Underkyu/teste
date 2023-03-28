@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+</head>
+<body>
+	<h1>Calculadora</h1>
+
+	<label>Digite o primeiro número:</label>
+	<input type="number" id="num1"><br><br>
+
+	<label>Digite o segundo número:</label>
+	<input type="number" id="num2"><br><br>
+
+	<button onclick="somar()">Somar</button>
+	<button onclick="subtrair()">Subtrair</button>
+	<button onclick="multiplicar()">Multiplicar</button>
+	<button onclick="dividir()">Dividir</button><br><br>
+
+	<label>Resultado:</label>
+	<input type="text" id="resultado" disabled>
+
+	<script>
+		function somar() {
+			var num1 = parseFloat(document.getElementById("num1").value);
+			var num2 = parseFloat(document.getElementById("num2").value);
+			var resultado = num1 + num2;
+			document.getElementById("resultado").value = resultado;
+		}
+
+		function subtrair() {
+			var num1 = parseFloat(document.getElementById("num1").value);
+			var num2 = parseFloat(document.getElementById("num2").value);
+			var resultado = num1 - num2;
+			document.getElementById("resultado").value = resultado;
+		}
+
+		function multiplicar() {
+			var num1 = parseFloat(document.getElementById("num1").value);
+			var num2 = parseFloat(document.getElementById("num2").value);
+			var resultado = num1 * num2;
+			document.getElementById("resultado").value = resultado;
+		}
+
+		function dividir() {
+			var num1 = parseFloat(document.getElementById("num1").value);
+			var num2 = parseFloat(document.getElementById("num2").value);
+			var resultado = num1 / num2;
+			document.getElementById("resultado").value = resultado;
+		}
+	</script>
+</body>
+</html>
